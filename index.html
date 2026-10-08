@@ -496,7 +496,7 @@
   function route() {
     var r = (location.hash || "").replace("#", "");
     var current = "home";
-    var title = "Cool Caterpillar";
+    var title = "Creative Caterpillar";
     if (LISTS[r]) {
       current = "list";
       showList(r);
@@ -505,7 +505,7 @@
       current = "soon";
       document.getElementById("soon-title").textContent = SOON[r].title;
       document.getElementById("soon-text").textContent = SOON[r].text;
-      title = SOON[r].title + " | Cool Caterpillar";
+      title = SOON[r].title + " | Creative Caterpillar";
     }
     Object.keys(views).forEach(function (k) { views[k].hidden = (k !== current); });
     document.title = title;
@@ -517,3 +517,15 @@
 </script>
 </body>
 </html>
+
+           /* the happy insects recipies */
+  .the happy insects recipies { text-align: center; }
+  .donate a {
+    display: inline-block;
+    padding: 0.2rem 1.6rem 0.3rem;
+    border: 2.5px solid var(--ink);
+    border-radius: 999px;
+    font-size: 1.5rem;
+  }
+  .donate a:hover { background: var(--light green); color: var(--on-fill); }
+  .donate p { margin: 0.8rem 0 0; text-align: left; font-size: 1.05rem; }
